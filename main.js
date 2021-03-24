@@ -12,26 +12,27 @@ for (let i = 0; i < buttons.length; i++) {
     })
 }
 
-const main = document.querySelector("main");
+const main = document.createElement("main");
 const button = document.querySelector("button");
 
-button.addEventListener("click", fooButton) 
-    function fooButton() {
-        const h3 = document.createElement ('h3');
+button.addEventListener("click", responseToClick) 
+        function responseToClick () {
+        const h3 = document.createElement ("h3");
         h3.textContent = "Foo"; 
         main.appendChild(h3); 
     }
 
-    button.addEventListener("click", function () {
+button.addEventListener("click", responseToClick)
+        function responseToClick () {
         const h3 = document.createElement ("h3");
         h3.textContent = "Bar"; 
-        body.appendChild(h3);
-     })
+        main.appendChild(h3);
+     }
     
 
-
-    button.addEventListener("click", function (event) {
+    button.addEventListener("click", responseToClick) 
+        function responseToClick() {
         const h2 = document.createElement("h2");
         h2.textContent = "FooBar";
-        body.appendChild(h2);
-    }) 
+        main.appendChild(h2);
+    } 
